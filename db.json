@@ -1,0 +1,595 @@
+{
+  "dispositivos": [
+    {
+      "id": 1,
+      "nombre": "Router Core Cisco ASR 1001-X",
+      "ip": "192.168.1.1",
+      "tipo": "router",
+      "fabricante": "Cisco",
+      "modelo": "ASR 1001-X",
+      "estado": "up",
+      "uptime_dias": 245
+    },
+    {
+      "id": 2,
+      "nombre": "Switch Distribucion Cisco Catalyst 9300",
+      "ip": "192.168.1.2",
+      "tipo": "switch_l3",
+      "fabricante": "Cisco",
+      "modelo": "Catalyst 9300",
+      "estado": "up",
+      "uptime_dias": 198
+    },
+    {
+      "id": 3,
+      "nombre": "Firewall Fortinet FortiGate 100F",
+      "ip": "10.0.0.1",
+      "tipo": "firewall",
+      "fabricante": "Fortinet",
+      "modelo": "FortiGate 100F",
+      "estado": "up",
+      "uptime_dias": 312
+    },
+    {
+      "id": 4,
+      "nombre": "Access Point UniFi U6 Piso 1",
+      "ip": "192.168.10.21",
+      "tipo": "ap",
+      "fabricante": "Ubiquiti",
+      "modelo": "UniFi U6",
+      "estado": "up",
+      "uptime_dias": 121
+    },
+    {
+      "id": 5,
+      "nombre": "Access Point UniFi U6 Piso 2",
+      "ip": "192.168.10.22",
+      "tipo": "ap",
+      "fabricante": "Ubiquiti",
+      "modelo": "UniFi U6",
+      "estado": "down",
+      "uptime_dias": 0
+    },
+    {
+      "id": 6,
+      "nombre": "Servidor DNS Primario",
+      "ip": "172.16.0.10",
+      "tipo": "server",
+      "fabricante": "Dell",
+      "modelo": "PowerEdge R540",
+      "estado": "up",
+      "uptime_dias": 410
+    },
+    {
+      "id": 7,
+      "nombre": "Servidor DNS Secundario",
+      "ip": "172.16.0.11",
+      "tipo": "server",
+      "fabricante": "Dell",
+      "modelo": "PowerEdge R540",
+      "estado": "up",
+      "uptime_dias": 405
+    },
+    {
+      "id": 8,
+      "nombre": "Servidor de Monitoreo Zabbix",
+      "ip": "172.16.0.20",
+      "tipo": "server",
+      "fabricante": "HP",
+      "modelo": "ProLiant DL360",
+      "estado": "up",
+      "uptime_dias": 287
+    }
+  ],
+  "interfaces": [
+    {
+      "id": 101,
+      "dispositivo_id": 1,
+      "nombre": "GigabitEthernet0/0/0",
+      "ip": "192.168.1.1",
+      "velocidad": 1000,
+      "estado": "up",
+      "trafico_in": 420,
+      "trafico_out": 390
+    },
+    {
+      "id": 102,
+      "dispositivo_id": 1,
+      "nombre": "GigabitEthernet0/0/1",
+      "ip": "10.10.10.1",
+      "velocidad": 1000,
+      "estado": "up",
+      "trafico_in": 250,
+      "trafico_out": 210
+    },
+    {
+      "id": 103,
+      "dispositivo_id": 2,
+      "nombre": "TenGigabitEthernet1/0/1",
+      "ip": "192.168.2.1",
+      "velocidad": 10000,
+      "estado": "up",
+      "trafico_in": 5200,
+      "trafico_out": 4800
+    },
+    {
+      "id": 104,
+      "dispositivo_id": 2,
+      "nombre": "TenGigabitEthernet1/0/2",
+      "ip": "192.168.2.2",
+      "velocidad": 10000,
+      "estado": "up",
+      "trafico_in": 3300,
+      "trafico_out": 2950
+    },
+    {
+      "id": 105,
+      "dispositivo_id": 3,
+      "nombre": "port1",
+      "ip": "10.0.0.1",
+      "velocidad": 1000,
+      "estado": "up",
+      "trafico_in": 640,
+      "trafico_out": 610
+    },
+    {
+      "id": 106,
+      "dispositivo_id": 3,
+      "nombre": "port2",
+      "ip": "172.16.1.1",
+      "velocidad": 1000,
+      "estado": "up",
+      "trafico_in": 710,
+      "trafico_out": 680
+    },
+    {
+      "id": 107,
+      "dispositivo_id": 4,
+      "nombre": "wlan0",
+      "ip": "192.168.10.21",
+      "velocidad": 1200,
+      "estado": "up",
+      "trafico_in": 320,
+      "trafico_out": 290
+    },
+    {
+      "id": 108,
+      "dispositivo_id": 5,
+      "nombre": "wlan0",
+      "ip": "192.168.10.22",
+      "velocidad": 1200,
+      "estado": "down",
+      "trafico_in": 0,
+      "trafico_out": 0
+    }
+  ],
+  "vlans": [
+    {
+      "id": 10,
+      "nombre": "Administracion",
+      "descripcion": "Red de gestion de equipos",
+      "segmento": "192.168.10.0/24",
+      "cantidad_dispositivos": 14,
+      "estado": "activa"
+    },
+    {
+      "id": 20,
+      "nombre": "Usuarios",
+      "descripcion": "Red corporativa de usuarios finales",
+      "segmento": "192.168.20.0/24",
+      "cantidad_dispositivos": 85,
+      "estado": "activa"
+    },
+    {
+      "id": 30,
+      "nombre": "Servidores",
+      "descripcion": "Segmento para servidores internos",
+      "segmento": "172.16.0.0/24",
+      "cantidad_dispositivos": 12,
+      "estado": "activa"
+    },
+    {
+      "id": 40,
+      "nombre": "VoIP",
+      "descripcion": "Telefonia IP y softphones",
+      "segmento": "192.168.40.0/24",
+      "cantidad_dispositivos": 33,
+      "estado": "activa"
+    },
+    {
+      "id": 50,
+      "nombre": "Invitados",
+      "descripcion": "Acceso WiFi para visitantes",
+      "segmento": "192.168.50.0/24",
+      "cantidad_dispositivos": 41,
+      "estado": "restringida"
+    },
+    {
+      "id": 60,
+      "nombre": "CCTV",
+      "descripcion": "Camaras IP y videovigilancia",
+      "segmento": "192.168.60.0/24",
+      "cantidad_dispositivos": 18,
+      "estado": "activa"
+    }
+  ],
+  "alertas": [
+    {
+      "id": 1,
+      "timestamp": "2025-10-10T08:15:00Z",
+      "dispositivo_id": 5,
+      "dispositivo": "Access Point UniFi U6 Piso 2",
+      "severidad": "critica",
+      "estado": "abierta",
+      "mensaje": "El dispositivo no responde por ICMP"
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-10-10T08:25:00Z",
+      "dispositivo_id": 3,
+      "dispositivo": "Firewall Fortinet FortiGate 100F",
+      "severidad": "alta",
+      "estado": "en_revision",
+      "mensaje": "Uso de CPU superior al 85%"
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-10-10T08:40:00Z",
+      "dispositivo_id": 2,
+      "dispositivo": "Switch Distribucion Cisco Catalyst 9300",
+      "severidad": "media",
+      "estado": "abierta",
+      "mensaje": "Paquetes descartados en uplink principal"
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-10-10T09:05:00Z",
+      "dispositivo_id": 6,
+      "dispositivo": "Servidor DNS Primario",
+      "severidad": "baja",
+      "estado": "cerrada",
+      "mensaje": "Tiempo de respuesta DNS elevado"
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-10-10T09:20:00Z",
+      "dispositivo_id": 8,
+      "dispositivo": "Servidor de Monitoreo Zabbix",
+      "severidad": "alta",
+      "estado": "abierta",
+      "mensaje": "Espacio en disco por encima del 90%"
+    }
+  ],
+  "protocolos": [
+    {
+      "id": 1,
+      "nombre": "OSPF",
+      "estado": "activo",
+      "area": "0.0.0.0",
+      "neighbors": 4,
+      "router_id": "192.168.1.1"
+    },
+    {
+      "id": 2,
+      "nombre": "BGP",
+      "estado": "activo",
+      "asn_local": 65001,
+      "asn_remoto": 65002,
+      "neighbors": 2
+    },
+    {
+      "id": 3,
+      "nombre": "EIGRP",
+      "estado": "inactivo",
+      "asn": 100,
+      "neighbors": 0
+    }
+  ],
+  "trafico": [
+    {
+      "id": 1,
+      "hora": "08:00",
+      "in_mbps": 320,
+      "out_mbps": 280
+    },
+    {
+      "id": 2,
+      "hora": "09:00",
+      "in_mbps": 410,
+      "out_mbps": 355
+    },
+    {
+      "id": 3,
+      "hora": "10:00",
+      "in_mbps": 520,
+      "out_mbps": 460
+    },
+    {
+      "id": 4,
+      "hora": "11:00",
+      "in_mbps": 610,
+      "out_mbps": 540
+    },
+    {
+      "id": 5,
+      "hora": "12:00",
+      "in_mbps": 580,
+      "out_mbps": 500
+    },
+    {
+      "id": 6,
+      "hora": "13:00",
+      "in_mbps": 490,
+      "out_mbps": 430
+    },
+    {
+      "id": 7,
+      "hora": "14:00",
+      "in_mbps": 450,
+      "out_mbps": 390
+    },
+    {
+      "id": 8,
+      "hora": "15:00",
+      "in_mbps": 530,
+      "out_mbps": 470
+    },
+    {
+      "id": 9,
+      "hora": "16:00",
+      "in_mbps": 670,
+      "out_mbps": 590
+    },
+    {
+      "id": 10,
+      "hora": "17:00",
+      "in_mbps": 720,
+      "out_mbps": 640
+    },
+    {
+      "id": 11,
+      "hora": "18:00",
+      "in_mbps": 690,
+      "out_mbps": 610
+    },
+    {
+      "id": 12,
+      "hora": "19:00",
+      "in_mbps": 540,
+      "out_mbps": 480
+    }
+  ],
+  "topologia": [
+    {
+      "id": 1,
+      "nodos": [
+        {
+          "id": 1,
+          "label": "Router Core",
+          "tipo": "router",
+          "estado": "up"
+        },
+        {
+          "id": 2,
+          "label": "Switch Distribucion",
+          "tipo": "switch_l3",
+          "estado": "up"
+        },
+        {
+          "id": 3,
+          "label": "Firewall",
+          "tipo": "firewall",
+          "estado": "up"
+        },
+        {
+          "id": 4,
+          "label": "AP Piso 1",
+          "tipo": "ap",
+          "estado": "up"
+        },
+        {
+          "id": 5,
+          "label": "AP Piso 2",
+          "tipo": "ap",
+          "estado": "down"
+        },
+        {
+          "id": 6,
+          "label": "DNS Primario",
+          "tipo": "server",
+          "estado": "up"
+        },
+        {
+          "id": 7,
+          "label": "DNS Secundario",
+          "tipo": "server",
+          "estado": "up"
+        },
+        {
+          "id": 8,
+          "label": "Internet",
+          "tipo": "nube",
+          "estado": "up"
+        }
+      ],
+      "enlaces": [
+        {
+          "origen": 1,
+          "destino": 2,
+          "velocidad": "10Gbps",
+          "tipo": "fibra"
+        },
+        {
+          "origen": 1,
+          "destino": 3,
+          "velocidad": "1Gbps",
+          "tipo": "ethernet"
+        },
+        {
+          "origen": 2,
+          "destino": 4,
+          "velocidad": "1Gbps",
+          "tipo": "ethernet"
+        },
+        {
+          "origen": 2,
+          "destino": 5,
+          "velocidad": "1Gbps",
+          "tipo": "ethernet"
+        },
+        {
+          "origen": 2,
+          "destino": 6,
+          "velocidad": "1Gbps",
+          "tipo": "ethernet"
+        },
+        {
+          "origen": 2,
+          "destino": 7,
+          "velocidad": "1Gbps",
+          "tipo": "ethernet"
+        },
+        {
+          "origen": 3,
+          "destino": 8,
+          "velocidad": "1Gbps",
+          "tipo": "wan"
+        }
+      ]
+    }
+  ],
+  "dns": [
+    {
+      "id": 1,
+      "host": "router-core.red.local",
+      "tipo": "A",
+      "valor": "192.168.1.1"
+    },
+    {
+      "id": 2,
+      "host": "switch-dist.red.local",
+      "tipo": "A",
+      "valor": "192.168.1.2"
+    },
+    {
+      "id": 3,
+      "host": "fw.red.local",
+      "tipo": "A",
+      "valor": "10.0.0.1"
+    },
+    {
+      "id": 4,
+      "host": "dns1.red.local",
+      "tipo": "A",
+      "valor": "172.16.0.10"
+    },
+    {
+      "id": 5,
+      "host": "dns2.red.local",
+      "tipo": "A",
+      "valor": "172.16.0.11"
+    },
+    {
+      "id": 6,
+      "host": "mail.red.local",
+      "tipo": "MX",
+      "valor": "mail.red.local"
+    },
+    {
+      "id": 7,
+      "host": "red.local",
+      "tipo": "NS",
+      "valor": "dns1.red.local"
+    }
+  ],
+  "ipinfo": [
+    {
+      "id": 1,
+      "ip": "8.8.8.8",
+      "asn": "AS15169",
+      "organizacion": "Google LLC",
+      "pais": "Estados Unidos",
+      "ciudad": "Mountain View",
+      "isp": "Google",
+      "tipo": "publica"
+    },
+    {
+      "id": 2,
+      "ip": "1.1.1.1",
+      "asn": "AS13335",
+      "organizacion": "Cloudflare, Inc.",
+      "pais": "Estados Unidos",
+      "ciudad": "Los Angeles",
+      "isp": "Cloudflare",
+      "tipo": "publica"
+    },
+    {
+      "id": 3,
+      "ip": "192.168.1.1",
+      "asn": null,
+      "organizacion": "Red interna corporativa",
+      "pais": "Argentina",
+      "ciudad": "Concepcion del Uruguay",
+      "isp": "LAN interna",
+      "tipo": "privada"
+    }
+  ],
+  "sla": [
+    {
+      "id": 1,
+      "servicio": "Internet WAN",
+      "disponibilidad_pct": 99.82,
+      "latencia_promedio_ms": 18,
+      "jitter_ms": 3,
+      "paquetes_perdidos_pct": 0.2
+    },
+    {
+      "id": 2,
+      "servicio": "DNS Interno",
+      "disponibilidad_pct": 99.95,
+      "latencia_promedio_ms": 5,
+      "jitter_ms": 1,
+      "paquetes_perdidos_pct": 0.0
+    },
+    {
+      "id": 3,
+      "servicio": "WiFi Corporativo",
+      "disponibilidad_pct": 98.7,
+      "latencia_promedio_ms": 14,
+      "jitter_ms": 4,
+      "paquetes_perdidos_pct": 0.9
+    },
+    {
+      "id": 4,
+      "servicio": "Telefonia VoIP",
+      "disponibilidad_pct": 99.1,
+      "latencia_promedio_ms": 22,
+      "jitter_ms": 6,
+      "paquetes_perdidos_pct": 0.6
+    }
+  ],
+  "ping_samples": [
+    {
+      "id": 1,
+      "host": "8.8.8.8",
+      "latencia_ms": 24,
+      "estado": "reachable",
+      "paquetes": {
+        "enviados": 4,
+        "recibidos": 4,
+        "perdidos": 0
+      }
+    },
+    {
+      "id": 2,
+      "host": "192.168.10.22",
+      "latencia_ms": null,
+      "estado": "unreachable",
+      "paquetes": {
+        "enviados": 4,
+        "recibidos": 0,
+        "perdidos": 4
+      }
+    }
+  ]
+}
