@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2</title>
+    <title>Ejercicio 3</title>
 </head>
 <body>
 
-    <form id="form-dispositivo" onsubmit="obtenerDispositivo(event)">
+    <form id="form-interfaces" onsubmit="obtenerInterfaces(event)">
         <label for="id">ID</label>
         <input type="number" id="input_id" placeholder="ID" required>
         <button type="submit">Buscar</button>
     </form>
 
-    <h1>Consulta de Dispositivo por ID</h1>
+    <h1>Dispositivo</h1>
     <table>
         <thead>
             <tr>
@@ -27,7 +27,24 @@
                 <th>Uptime (dias)</th>
             </tr>
         </thead>
-        <tbody id="body-table">
+        <tbody id="body-table-dispositivo">
+        </tbody>
+    </table>
+
+    <h1>Interfaces</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>IP</th>
+                <th>Velocidad</th>
+                <th>Estado</th>
+                <th>Trafico In</th>
+                <th>Trafico Out</th>
+                <th>Utilización</th>
+            </tr>
+        </thead>
+        <tbody id="body-table-interfaces">
         </tbody>
     </table>
     <script src="app.js"></script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+
+    <form id="form-alertas" onsubmit="filtrarAlertas(event)">
+        <label for="id">Buscar por severidad o estado</label>
+        <select name="severidad" id="input_severidad">
+            <option value="">Todas</option>
+            <option value="critica">Critica</option>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+        </select>
+        <select name="estado" id="input_estado">
+            <option value="">Todos</option>
+            <option value="abierta">Abierta</option>
+            <option value="en_revision">En revision</option>
+            <option value="cerrada">Cerrada</option>
+        </select>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <h1>Sistema de Alertas con Múltiples Filtros</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Timestamp</th>
+                <th>Dispositivo</th>
+                <th>Severidad</th>
+                <th>Estado</th>
+                <th>Mensaje</th>
+            </tr>
+        </thead>
+        <tbody id="body-table-alertas">
+        </tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>

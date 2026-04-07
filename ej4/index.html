@@ -3,33 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2</title>
+    <title>Ejercicio 4</title>
 </head>
 <body>
 
-    <form id="form-dispositivo" onsubmit="obtenerDispositivo(event)">
-        <label for="id">ID</label>
-        <input type="number" id="input_id" placeholder="ID" required>
+    <form id="form-vlans" onsubmit="filtrarVlans(event)">
+        <label for="id">Buscar por nombre o segmento</label>
+        <input type="text" id="input_busqueda" placeholder="Nombre o segmento" required>
         <button type="submit">Buscar</button>
     </form>
 
-    <h1>Consulta de Dispositivo por ID</h1>
+    <h1>Gestión de VLANs con Filtrado Local</h1>
     <table>
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>IP</th>
-                <th>Tipo</th>
-                <th>Fabricante</th>
-                <th>Modelo</th>
+                <th>Segmento</th>
+                <th>Cantidad de Dispositivos</th>
                 <th>Estado</th>
-                <th>Uptime (dias)</th>
             </tr>
         </thead>
-        <tbody id="body-table">
+        <tbody id="body-table-vlans">
         </tbody>
     </table>
+
     <script src="app.js"></script>
 </body>
 </html>
