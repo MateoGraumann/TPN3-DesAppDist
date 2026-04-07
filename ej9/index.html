@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+
+    <h1>Consulta DNS y Geolocalización IP</h1>
+
+    <form id="form-ip" onsubmit="consultarIP(event)">
+        <label for="input_ip">IP</label>
+        <input id="input_ip" type="text" placeholder="ej. 8.8.8.8" required>
+        <button type="submit">Consultar</button>
+    </form>
+
+    <h2>Resultado combinado</h2>
+    <pre id="resultado-json"></pre>
+
+    <h2>Registros DNS internos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Host</th>
+                <th>Tipo</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody id="body-table-dns"></tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+
+    <h1>Dashboard de SLA — Promise.allSettled()</h1>
+
+    <button type="button" onclick="generarReporteSLA()">Generar reporte</button>
+
+    <h2>Estado de endpoints</h2>
+    <ul id="lista-endpoints"></ul>
+
+    <h2>Métricas globales</h2>
+    <pre id="metricas-globales"></pre>
+
+    <h2>Servicios (SLA)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Servicio</th>
+                <th>Disponibilidad (%)</th>
+                <th>Latencia promedio (ms)</th>
+                <th>Jitter (ms)</th>
+                <th>Paquetes perdidos (%)</th>
+            </tr>
+        </thead>
+        <tbody id="body-table-sla"></tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
